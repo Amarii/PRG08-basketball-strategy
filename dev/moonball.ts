@@ -1,23 +1,16 @@
 class MoonBall extends Ball {
+    public behavior: Behavior
+
     constructor(minWidth : number, maxWidth : number) {
         super(minWidth, maxWidth)
+        this.behavior = new Float(this)
+
     }
 
     public update() : void {
-        this.x += this.speedX
-        this.y += this.speedY
-        
-        if (this.x < this.minWidth || this.x > this.maxWidth)
-        {
-            this.speedX *= -1
-            
-        }
-        if (this.y < 0 || this.y > this.maxHeight)
-        {
-            this.speedY *= -1
-        }
+ this.behavior.update()
 
-        this.draw()
+      
     }
 }
 

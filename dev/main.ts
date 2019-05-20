@@ -16,7 +16,7 @@ class Main {
         for (const ball of this.balls) {
             ball.update()
         }
-
+        
         this.basketBall.update()
 
         requestAnimationFrame(() => this.gameLoop())
